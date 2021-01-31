@@ -35,9 +35,10 @@ export default function Home() {
                   setName(ev.target.value);
                 }}
                 placeholder="Diz aí seu nome"
+                value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                Jogar {name}
+                {`Jogar ${name}`}
               </Button>
             </form>
           </Widget.Content>
