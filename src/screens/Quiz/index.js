@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import Widget from '../src/components/Widget';
-import db from '../db.json';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import Button from '../src/components/Button';
-import AlternativesForm from '../src/components/AlternativesForm';
+import Widget from '../../components/Widget';
+import QuizContainer from '../../components/QuizContainer';
+import QuizLogo from '../../components/QuizLogo';
+import QuizBackground from '../../components/QuizBackground';
+import Button from '../../components/Button';
+import AlternativesForm from '../../components/AlternativesForm';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 function ResultsWidget({ results }) {
   return (
@@ -61,7 +61,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" /> */}
+        <BackLinkArrow href="/" />
         <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
       </Widget.Header>
 
@@ -131,12 +131,13 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage() {
+export default function QuizPage({ db }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
-  const totalQuestions = db.questions.length;
   const questionIndex = currentQuestion;
+
+  const totalQuestions = db.questions.length;
   const question = db.questions[questionIndex];
 
   function addResult(result) {

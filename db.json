@@ -4,11 +4,18 @@
   "description": "Teste os seus conhecimentos sobre Shingeki no Kyojin e vamos ver quantos pontos você fazer",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
-      "alternatives": [".elemento", "*elemento", "#elemento", "%elemento"]
+      "image": "https://i.pinimg.com/originals/e6/37/85/e6378583f00f0f3d435af3a63e3da9c2.jpg",
+      "title": "Quem foi o responsável pela captura do Titã Colossal?",
+      "description": "Escolha uma das opções",
+      "answer": 3,
+      "alternatives": [
+        "Zoe Hanji",
+        "Erwin Smith",
+        "Jean",
+        "Armin",
+        "Levi Ackerman",
+        "Eren Jaergar"
+      ]
     },
     {
       "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
@@ -21,7 +28,10 @@
       ]
     }
   ],
-  "external": [""],
+  "external": [
+    "https://aluraquiz-base-git-main.alura-challenges.vercel.app/",
+    "https://aluraquiz-base-git-main.alura-challenges.vercel.app/"
+  ],
   "theme": {
     "colors": {
       "primary": "#0d47a1",
