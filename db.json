@@ -18,13 +18,36 @@
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://img.quizur.com/f/img5c37fb02dfd751.63879984.jpg",
+      "title": "Qual a ortografia correta em japonês de \"Ofereçam seus corações\"?",
+      "description": "Escolha uma das opções",
+      "answer": 2,
       "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
+        "Shinzo ou sasagueyo!",
+        "Xinzo Zsagueio!",
+        "Shinzou wo Sasageyo!",
+        "Shinzo wo Sasageyo!"
+      ]
+    },
+    {
+      "image": "https://img.quizur.com/f/img5c37fc7a24e294.29960398.jpeg",
+      "title": "Quantos soldados da tropa de exploração sobraram depois batalha de Shingashina?",
+      "description": "Escolha uma das opções",
+      "answer": 3,
+      "alternatives": ["104", "98", "1", "9", "113", "248"]
+    },
+    {
+      "image": "https://img.quizur.com/f/img5c37fe87e18736.39350301.jpg",
+      "title": "Quais são os comandantes da tropa de exploração em ordem cronológica?",
+      "description": "Escolha uma das opções",
+      "answer": 3,
+      "alternatives": [
+        "Hannes, Keith, Erwin, Levi",
+        "Pixis, Hannes, Keith, Erwin",
+        "Keith, Erwin, Levi",
+        "Keith, Erwin, Hanji",
+        "Pixis, Erwin, Hanji",
+        "Hannes, Erwin, Hanji, Levi"
       ]
     }
   ],
