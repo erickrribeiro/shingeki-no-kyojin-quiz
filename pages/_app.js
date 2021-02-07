@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }) {
         <title>Shingeki no Kyojin | Quiz</title>
         <meta
           name="description"
-          content="O melhor quiz em português sobre atack ao titã."
+          content="O melhor quiz em português sobre atack ao titã, atack on titan ou Shingeki no Kyojin."
         />
 
         {/* Open Graph */}
@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:locale" content="pt_BR" />
         <meta
           property="og:description"
-          content="Teste os seus conhecimentos sobre Shingeki no Kyojin e vamos ver quantos pontos você fazer."
+          content="Teste os seus conhecimentos sobre Shingeki no Kyojin e vamos ver quantos pontos você consegue fazer."
           key="ogdesc"
         />
         <meta
