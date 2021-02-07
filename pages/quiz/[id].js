@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
@@ -5,6 +6,9 @@ import QuizScreen from '../../src/screens/Quiz';
 export default function dynamicPage({ externalDb }) {
   return (
     <ThemeProvider theme={externalDb.theme}>
+      <Head>
+        <title>{externalDb.title}</title>
+      </Head>
       <QuizScreen db={externalDb} />
     </ThemeProvider>
   );

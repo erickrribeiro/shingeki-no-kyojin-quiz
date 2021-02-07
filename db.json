@@ -51,10 +51,7 @@
       ]
     }
   ],
-  "external": [
-    "https://aluraquiz-base-git-main.alura-challenges.vercel.app/",
-    "https://aluraquiz-base-git-main.alura-challenges.vercel.app/"
-  ],
+  "external": ["https://aluraquiz-base-git-main.alura-challenges.vercel.app/"],
   "theme": {
     "colors": {
       "primary": "#0d47a1",

@@ -14,16 +14,12 @@ function ResultsWidget({ results }) {
       <Widget.Header>Tela de resultados:</Widget.Header>
       <Widget.Content>
         <p>
-          Você acertou{' '}
-          {results.reduce((sum, curr) => {
-            const isCorrect = curr === true;
-            return isCorrect ? sum + 1 : sum;
-          })}{' '}
-          perguntas
+          {`Você acertou 
+          ${results.filter((element) => element > 0).length} perguntas!`}
         </p>
         <ul>
           {results.map((result, index) => (
-            <li key={`result__${result}`}>
+            <li key={`result__${index + 1}`}>
               {`#${index + 1} Resultado:`}
               {result === true ? 'Acertou' : 'Errou'}
             </li>
@@ -50,13 +46,11 @@ function QuestionWidget({
   onSubmit,
   addResult,
 }) {
-  const [selectedAlternative, setSelectedAlternative] = React.useState(
-    undefined,
-  );
+  const [selectedAlternative, setSelectedAlternative] = React.useState(-1);
   const [isQuestionsSubmited, setIsQuestionsSubmited] = React.useState();
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
-  const hasAlternativeSelected = selectedAlternative !== undefined;
+  const hasAlternativeSelected = selectedAlternative !== -1;
 
   return (
     <Widget>
@@ -86,7 +80,6 @@ function QuestionWidget({
               addResult(isCorrect);
               onSubmit();
               setIsQuestionsSubmited(false);
-              setSelectedAlternative(undefined);
             }, 2 * 1000);
           }}
         >
@@ -94,6 +87,7 @@ function QuestionWidget({
             const alternativeId = `alternative__${alternativeIndex}`;
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
             const isSelect = selectedAlternative === alternativeIndex;
+            const isAnswer = question.answer === alternativeIndex;
             return (
               <Widget.Topic
                 as="label"
@@ -101,12 +95,15 @@ function QuestionWidget({
                 key={alternativeId}
                 data-selected={isSelect}
                 data-status={isQuestionsSubmited && alternativeStatus}
+                data-answer={isQuestionsSubmited && isAnswer}
               >
                 <input
                   style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
-                  onChange={() => setSelectedAlternative(alternativeIndex)}
+                  onClick={() => {
+                    setSelectedAlternative(alternativeIndex);
+                  }}
                   type="radio"
                 />
                 {alternative}
@@ -132,12 +129,12 @@ const screenStates = {
 };
 
 export default function QuizPage({ db }) {
+  const totalQuestions = db.questions.length;
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
 
-  const totalQuestions = db.questions.length;
   const question = db.questions[questionIndex];
 
   function addResult(result) {
@@ -159,7 +156,7 @@ export default function QuizPage({ db }) {
   }
 
   return (
-    <QuizBackground background={db.bg}>
+    <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
         <QuestionWidget
