@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }) {
         {/* Twitter */}
         <meta
           name="twitter:card"
-          content="Teste os seus conhecimentos sobre Shingeki no Kyojin e vamos ver quantos pontos você fazer."
+          content="Teste os seus conhecimentos sobre Shingeki no Kyojin e vamos ver quantos pontos você consegue fazer."
           key="twcard"
         />
         <meta name="twitter:creator" content="@erickribeiro" key="twhandle" />
