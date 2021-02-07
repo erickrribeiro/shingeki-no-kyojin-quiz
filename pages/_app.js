@@ -36,11 +36,45 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <title>Shingeki no Kyojin | Quiz</title>
         <meta
           name="description"
           content="O melhor quiz em português sobre atack ao titã."
         />
-        <title>Shingeki no Kyojin | Quiz</title>
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Shingeki no Kyojin | Quiz."
+          key="ogtitle"
+        />
+        <meta property="og:locale" content="pt_BR" />
+        <meta
+          property="og:description"
+          content="Teste os seus conhecimentos sobre Shingeki no Kyojin e vamos ver quantos pontos você fazer."
+          key="ogdesc"
+        />
+        <meta
+          property="og:image"
+          content="https://images8.alphacoders.com/108/1081458.jpg"
+          key="ogimage"
+        />
+        <meta
+          property="og:url"
+          content="https://shingeki-no-kyojin-quiz.vercel.app"
+          key="ogurl"
+        />
+
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="Teste os seus conhecimentos sobre Shingeki no Kyojin e vamos ver quantos pontos você fazer."
+          key="twcard"
+        />
+        <meta name="twitter:creator" content="@erickribeiro" key="twhandle" />
+
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
