@@ -20,9 +20,9 @@ export default function Home() {
 
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <Head>
+      {/* <Head>
         <title>{`AluraQuiz -${db.title}`}</title>
-      </Head>
+      </Head> */}
       <QuizContainer>
         <QuizLogo />
         <Widget
